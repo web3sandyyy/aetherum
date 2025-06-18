@@ -60,7 +60,7 @@ const MyPortfolio = () => {
   };
 
   return (
-    <div className="bg-white rounded-lg border border-gray-200 shadow-sm p-4 sm:p-6 overflow-hidden">
+    <div className="flex-grow bg-white rounded-lg border border-gray-200 shadow-sm p-4 sm:p-6 overflow-hidden">
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4 mb-6">
         <h2 className="text-lg font-semibold text-gray-900">My Portfolio</h2>
