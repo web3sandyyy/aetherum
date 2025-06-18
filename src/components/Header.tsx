@@ -42,7 +42,7 @@ const Header = ({ onToggleSidebar, onToggleMobileSidebar }: HeaderProps) => {
       {/* Desktop Header */}
       <div className="hidden lg:flex items-center gap-4">
         <PanelRight
-          className="h-6 w-6 cursor-pointer hover:text-gray-600"
+          className="h-6 w-6 cursor-pointer hover:text-gray-600 text-gray-400"
           onClick={onToggleSidebar}
         />
         <img
