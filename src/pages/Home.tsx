@@ -1,6 +1,11 @@
+
 function Home() {
   return (
-    <p>home</p>
+    <div className="h-full w-full">
+          <div className="p-4">
+            <p className="text-lg font-semibold">Home</p>
+          </div>
+    </div>
   );
 }
 
