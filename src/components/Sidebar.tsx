@@ -42,7 +42,7 @@ const Sidebar = ({
   };
 
   // Show Sidebar2 on home page, Sidebar1 on transactions page
-  const shouldShowSidebar2 = location.pathname === "/";
+  const shouldShowSidebar2 = location.pathname !== "/";
 
   const sidebarVariants = {
     hidden: {

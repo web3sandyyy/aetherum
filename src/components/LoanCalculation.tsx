@@ -49,7 +49,7 @@ const LoanCalculation = () => {
   const [bankAccount, setBankAccount] = useState("american-bank");
 
   return (
-    <div className="bg-white rounded-lg border border-gray-200 shadow-sm p-6 w-full">
+    <div className="bg-white rounded-lg border border-gray-200 shadow-sm p-4 md:p-6 w-full">
       <h2 className="text-lg font-semibold text-gray-900 mb-6">
         Loan Calculation
       </h2>
