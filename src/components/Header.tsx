@@ -48,7 +48,7 @@ const Header = ({ onToggleSidebar, onToggleMobileSidebar }: HeaderProps) => {
         <img
           src="/images/logo/logo-black.svg"
           alt="logo"
-          className="h-7 w-auto"
+          className="h-6 w-auto"
         />
       </div>
 
@@ -61,7 +61,7 @@ const Header = ({ onToggleSidebar, onToggleMobileSidebar }: HeaderProps) => {
         <img
           src="/images/logo/logo-black.svg"
           alt="logo"
-          className="h-7 w-auto"
+          className="h-6 w-auto my-1"
         />
       </div>
 

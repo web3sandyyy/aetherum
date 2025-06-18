@@ -4,7 +4,7 @@ import { AnimatePresence } from "framer-motion";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import Home from "./pages/Home";
-import Account from "./pages/Account";
+import Transactions from "./pages/Transactions";
 import "./App.css";
 
 function App() {
@@ -44,7 +44,7 @@ function App() {
           <div className="flex-1">
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/account" element={<Account />} />
+              <Route path="/transactions" element={<Transactions />} />
             </Routes>
           </div>
         </div>
