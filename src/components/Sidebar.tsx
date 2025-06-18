@@ -188,7 +188,7 @@ const Sidebar = ({
 
   return (
     <motion.div
-      className="min-h-full bg-white border-r border-gray-200 overflow-hidden"
+      className="h-[calc(100dvh-59px)] sticky top-[59px] z-10 bg-white border-r border-gray-200 overflow-hidden"
       initial={{
         width: isOpen ? 300 : 0,
         x: isOpen ? 0 : -300,

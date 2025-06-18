@@ -1,6 +1,8 @@
 import MyPortfolio from "../components/MyPortfolio";
 import PortfolioTracker from "../components/PortfolioTracker";
 import WalletScore from "../components/WalletScore";
+import LoanCalculation from "../components/LoanCalculation";
+import LoanDetails from "../components/LoanDetails";
 
 function Home() {
   return (
@@ -9,6 +11,10 @@ function Home() {
       <div className="flex flex-col md:flex-row gap-6">
         <MyPortfolio />
         <WalletScore />
+      </div>
+      <div className="flex flex-col md:flex-row gap-6">
+        <LoanCalculation />
+        <LoanDetails />
       </div>
     </div>
   );
