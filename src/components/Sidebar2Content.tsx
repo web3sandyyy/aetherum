@@ -159,11 +159,9 @@ const Sidebar2Content = () => {
       </nav>
 
       {/* Apply for Crypto Loan Button */}
-      <div className="mt-8 p-4">
-        <button className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors font-medium">
-          $ Apply for Crypto Loan
-        </button>
-      </div>
+      <button className=" mt-6 w-full bg-blue-600 text-white py-3 px-4  hover:bg-blue-700 transition-colors font-medium">
+        $ Apply for Crypto Loan
+      </button>
     </>
   );
 };
