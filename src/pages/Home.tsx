@@ -1,16 +1,17 @@
 import { Upload, Link2 } from "lucide-react";
 import AutoImportTable from "@/components/AutoImportTable";
 import AutoImport from "@/components/AutoImport";
+import { useState } from "react";
 
 function Home() {
-  const isImport = true;
+  const [isImport, setIsImport] = useState(false);
 
-  const handleFileImport = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (file) {
-      console.log("Import file selected:", file.name);
-    }
-  };
+  // const handleFileImport = (event: React.ChangeEvent<HTMLInputElement>) => {
+  //   const file = event.target.files?.[0];
+  //   if (file) {
+  //     console.log("Import file selected:", file.name);
+  //   }
+  // };
 
   return (
     <div className="h-full w-full bg-gray-50">
@@ -34,7 +35,17 @@ function Home() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-3">
-            <div className="relative">
+            <button
+              onClick={() => setIsImport(!isImport)}
+              className="flex items-center justify-center gap-2 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors w-full sm:w-auto"
+            >
+              <Upload className="w-4 h-4" />
+              Import File
+            </button>
+
+            {/* UNCOMMENT THIS FOR THE FILE UPLOAD */}
+
+            {/* <div className="relative">
               <input
                 type="file"
                 accept="image/*,.csv,.xlsx,.json"
@@ -45,7 +56,7 @@ function Home() {
                 <Upload className="w-4 h-4" />
                 Import File
               </button>
-            </div>
+            </div> */}
 
             {!isImport && (
               <button className="flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors w-full sm:w-auto">

@@ -5,22 +5,10 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "./ui/table";
-import {
-  ChevronDown,
-  Plus,
-  MoreHorizontal,
-  ChevronLeft,
-  ChevronRight,
-} from "lucide-react";
+import { ChevronDown, Plus, ChevronLeft, ChevronRight } from "lucide-react";
 import transactions from "@/constants/transactions";
+import DesktopTransactionTable from "./DesktopTransactionTable";
+import MobileTransactionCards from "./MobileTransactionCards";
 
 const AutoImportTable = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -141,81 +129,14 @@ const AutoImportTable = () => {
         </button>
       </div>
 
-      {/* Transaction Table */}
-      <div className="rounded-md border">
-        <Table>
-          <TableHeader>
-            <TableRow className="bg-gray-100">
-              <TableHead className="font-semibold text-gray-700">
-                Date
-              </TableHead>
-              <TableHead className="font-semibold text-gray-700">
-                Income Source
-              </TableHead>
-              <TableHead className="font-semibold text-gray-700">
-                Account
-              </TableHead>
-              <TableHead className="font-semibold text-gray-700">
-                Value
-              </TableHead>
-              <TableHead className="font-semibold text-gray-700">
-                Action
-              </TableHead>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            {currentTransactions.map((transaction, index) => (
-              <TableRow key={index} className="hover:bg-gray-50">
-                <TableCell className="font-medium text-gray-900 py-4">
-                  {transaction.date}
-                </TableCell>
-                <TableCell className="text-gray-700">
-                  {transaction.incomeSource}
-                </TableCell>
-                <TableCell>
-                  <div className="flex items-center gap-2">
-                    <div className="w-5 h-5 bg-blue-600 rounded-full flex items-center justify-center">
-                      <span className="text-white text-xs font-bold">C</span>
-                    </div>
-                    <span className="text-blue-600 font-medium">
-                      {transaction.account}
-                    </span>
-                  </div>
-                </TableCell>
-                <TableCell>
-                  <div className="flex items-center gap-2">
-                    <div className="w-5 h-5 bg-orange-500 rounded-full flex items-center justify-center">
-                      <span className="text-white text-xs font-bold">₿</span>
-                    </div>
-                    <span className="font-medium text-gray-900">
-                      +{transaction.value} BTC
-                    </span>
-                  </div>
-                </TableCell>
-                <TableCell>
-                  <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
-                      <button className="p-2 hover:bg-gray-100 rounded-md">
-                        <MoreHorizontal className="w-4 h-4" />
-                      </button>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent align="end">
-                      <DropdownMenuItem>View Details</DropdownMenuItem>
-                      <DropdownMenuItem>Edit Transaction</DropdownMenuItem>
-                      <DropdownMenuItem className="text-red-600">
-                        Delete
-                      </DropdownMenuItem>
-                    </DropdownMenuContent>
-                  </DropdownMenu>
-                </TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </div>
+      {/* Desktop Table Component */}
+      <DesktopTransactionTable transactions={currentTransactions} />
+
+      {/* Mobile Cards Component */}
+      <MobileTransactionCards transactions={currentTransactions} />
 
       {/* Pagination */}
-      <div className="flex items-center justify-between pt-4">
+      <div className="flex flex-col sm:flex-row items-center justify-between pt-6 gap-4">
         <button
           onClick={() => goToPage(currentPage - 1)}
           disabled={currentPage === 1}
@@ -225,15 +146,17 @@ const AutoImportTable = () => {
           Prev
         </button>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1 sm:gap-2 flex-wrap justify-center">
           {getVisiblePages().map((page, index) => (
             <React.Fragment key={index}>
               {page === "..." ? (
-                <span className="px-3 py-2 text-sm text-gray-500">...</span>
+                <span className="px-2 sm:px-3 py-2 text-sm text-gray-500">
+                  ...
+                </span>
               ) : (
                 <button
                   onClick={() => typeof page === "number" && goToPage(page)}
-                  className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                  className={`px-2 sm:px-3 py-2 text-sm font-medium rounded-md transition-colors ${
                     currentPage === page
                       ? "bg-blue-600 text-white"
                       : "text-gray-700 hover:bg-gray-100"
