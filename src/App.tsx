@@ -41,7 +41,7 @@ function App() {
             <Sidebar isOpen={isSidebarOpen} />
           </div>
 
-          <div className="flex-1">
+          <div className="flex-1 overflow-hidden">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/transactions" element={<Transactions />} />

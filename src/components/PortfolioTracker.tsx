@@ -30,7 +30,7 @@ const PortfolioTracker = () => {
     } satisfies ChartConfig;
 
     return (
-      <div className="p-4 border border-gray-200 shadow rounded-lg flex items-center gap-4">
+      <div className="p-4 bg-white border border-gray-200 shadow rounded-lg flex flex-col md:flex-row md:items-center gap-4">
         <div>
           <h3 className="text-sm font-medium text-gray-600 mb-1 whitespace-nowrap">
             {metric.title}
@@ -106,9 +106,9 @@ const PortfolioTracker = () => {
   };
 
   return (
-    <div className="p-6">
+    <div className="">
       {/* Header */}
-      <div className="flex justify-between items-start mb-6">
+      <div className="flex flex-col md:flex-row justify-between items-start mb-6">
         <div>
           <h1 className="text-xl font-semibold text-gray-900 mb-1">
             Portfolio Tracker
@@ -117,7 +117,7 @@ const PortfolioTracker = () => {
             View a Complete Breakdown of Assets By Wallet.
           </p>
         </div>
-        <button className=" px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors w-full sm:w-auto">
+        <button className="mt-4 md:mt-0 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors w-full sm:w-auto">
           Apply for Loan
         </button>
       </div>

@@ -38,7 +38,7 @@ const Header = ({ onToggleSidebar, onToggleMobileSidebar }: HeaderProps) => {
   };
 
   return (
-    <div className="w-full flex justify-between items-center p-2 border-b border-gray-200">
+    <div className="w-full sticky top-0 z-10 bg-white flex justify-between items-center p-2 border-b border-gray-200">
       {/* Desktop Header */}
       <div className="hidden lg:flex items-center gap-4">
         <PanelRight
