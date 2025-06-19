@@ -1,4 +1,4 @@
-import { portfolioMetrics, type PortfolioMetric } from "@/constants/portfolio";
+import { portfolioMetrics } from "@/constants/portfolio";
 import MetricCard, { type MetricData } from "./MetricCard";
 
 const PortfolioTracker = () => {

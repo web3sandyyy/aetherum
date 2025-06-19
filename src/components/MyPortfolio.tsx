@@ -1,4 +1,4 @@
-import React from "react";
+
 import { portfolioChartData } from "@/constants/myPortfolio";
 import {
   ChartContainer,

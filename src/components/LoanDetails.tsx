@@ -1,4 +1,3 @@
-import React from "react";
 
 // Configuration for loan details
 const LOAN_DETAILS = [

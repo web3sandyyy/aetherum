@@ -1,4 +1,3 @@
-import React from "react";
 
 const CRYPTO_ASSETS = [
   { symbol: "BTC", name: "Bitcoin", amount: "$70,000", logo: "₿" },
