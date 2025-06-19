@@ -11,4 +11,21 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  // Ensure SPA routing works in production
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    },
+  },
+  // For development server
+  server: {
+    historyApiFallback: true,
+  },
+  // For production preview
+  preview: {
+    port: 4173,
+    host: true,
+  },
 });
