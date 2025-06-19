@@ -85,7 +85,7 @@ const AssetsSelection = () => {
   };
 
   return (
-    <div className="w-full mx-auto p-4 space-y-4">
+    <div className="w-full mx-auto space-y-4">
       {/* Search and Filters */}
       <div className="flex items-center justify-between gap-4 mb-6">
         <div className="flex items-center gap-4">
