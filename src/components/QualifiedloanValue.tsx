@@ -10,7 +10,7 @@ const CRYPTO_ASSETS = [
 
 const QualifiedloanValue = () => {
   return (
-    <div className="lg:col-span-1 order-1 lg:order-2">
+    <div className="lg:col-span-1 order-1 lg:order-2 bg-gray-900 text-white p-4 rounded-lg">
       <h3 className="text-lg font-semibold mb-4">Qualified Loan Value</h3>
 
       <div className="space-y-3">
@@ -51,7 +51,7 @@ const QualifiedloanValue = () => {
         ))}
       </div>
 
-      <div className="mt-6 p-4 bg-gray-800 rounded-lg">
+      <div className="mt-6 p-4">
         <div className="text-base sm:text-lg font-semibold">
           Total Loan Value: $120,000
         </div>

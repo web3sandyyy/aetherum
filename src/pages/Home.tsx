@@ -10,7 +10,7 @@ function Home() {
       <PortfolioTracker />
       <div className="flex flex-col md:flex-row gap-4 md:gap-6">
         <MyPortfolio />
-        <WalletScore />
+        <WalletScore css="max-w-[350px]" />
       </div>
       <div className="flex flex-col md:flex-row gap-4 md:gap-6">
         <LoanCalculation />

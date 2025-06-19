@@ -1,7 +1,6 @@
-import React from "react";
 import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
 
-const WalletScore = () => {
+const WalletScore = ({ css }: { css?: string }) => {
   const score = 80;
   const maxScore = 100;
   const percentage = (score / maxScore) * 100;
@@ -16,7 +15,7 @@ const WalletScore = () => {
   const COLORS = ["#3b82f6", "#374151"]; // Blue for progress, dark gray for remaining
 
   return (
-    <div className="bg-gray-900 rounded-lg p-4 sm:p-6 text-white w-full max-w-[350px] flex flex-col min-h-0">
+    <div className={`bg-gray-900 rounded-lg p-4 sm:p-6 text-white w-full flex flex-col min-h-0 ${css}`}>
       {/* Header */}
       <div className="mb-4 sm:mb-6">
         <h2 className="text-lg sm:text-xl font-semibold mb-1">

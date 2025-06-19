@@ -7,6 +7,9 @@ import Home from "./pages/Home";
 import Transactions from "./pages/Transactions";
 import Collateral from "./pages/Collateral";
 import "./App.css";
+import Thankyou from "./pages/Thankyou";
+import ApproveLoan from "./pages/ApproveLoan";
+import ActiveLoan from "./pages/ActiveLoan";
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -47,6 +50,9 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/transactions" element={<Transactions />} />
               <Route path="/collateral" element={<Collateral />} />
+              <Route path="/approve-loan" element={<ApproveLoan />} />
+              <Route path="/active-loan" element={<ActiveLoan />} />
+              <Route path="/thankyou" element={<Thankyou />} />
             </Routes>
           </div>
         </div>
